@@ -1,0 +1,22 @@
+import chardet
+
+#file_path="C:\\Users\\rusha\\projects\\kannada_punct\\kannada_1m_clean.txt"
+def detect_encoding(file_path):
+    with open(file_path, 'rb') as f:
+        rawdata = f.read()
+
+    result = chardet.detect(rawdata)
+    
+    return result['encoding']
+
+# Provide the file path as input
+file_path = input("Enter the file path: ")
+
+# Detect the encoding
+encoding = detect_encoding(file_path)
+
+if encoding:
+    print(f"The detected encoding for {file_path} is: {encoding}")
+else:
+    print("Encoding detection failed. Unable to determine the encoding.")
+
