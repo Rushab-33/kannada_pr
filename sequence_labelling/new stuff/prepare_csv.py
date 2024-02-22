@@ -1,5 +1,8 @@
 ## usage -> python prepare_csv.py path/to/inp/file/containing/sentences path/to/output/csv
 import pandas
+
+import numpy as np
+
 import pandas as pd
 from tqdm import tqdm
 import timeit
